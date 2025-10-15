@@ -18,13 +18,13 @@ def create_data (filename="data/telemetry_sample.csv"):
             else:
                 acceleration = -9.8 + (t-60) * 0.1
 
-        velocity += acceleration * 0.1
-        altitude += velocity *0.1
-        if altitude < 0:
-            altitude = 0
+            velocity += acceleration * 0.1
+            altitude += velocity *0.1
+            if altitude < 0:
+                altitude = 0
 
-        temperature = 20 - 0.02 * altitude + random.uniform(-0.5,0.5)
-        writer.writerow([t, altitude, velocity, acceleration, temperature])
+            temperature = 20 - 0.02 * altitude + random.uniform(-0.5,0.5)
+            writer.writerow([t, altitude, velocity, acceleration, temperature])
 
 
 if __name__ == "__main__":

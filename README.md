@@ -1,1 +1,1 @@
-# rocketry_software_tryout
+# Telemetry Visualizer Project
